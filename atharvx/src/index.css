@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+@theme {
+  --color-teal-50: #f0fdfa;
+  --color-teal-100: #ccfbf1;
+  --color-teal-200: #99f6e4;
+  --color-teal-300: #5eead4;
+  --color-teal-400: #2dd4bf;
+  --color-teal-500: #14b8a6;
+  --color-teal-600: #0d9488;
+  --color-teal-700: #0f766e;
+  --color-teal-800: #115e59;
+  --color-teal-900: #134e4a;
+}
+
+body {
+  @apply bg-slate-50 text-slate-900 font-sans antialiased;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.app-container {
+  @apply w-full mx-auto px-4 sm:px-6 lg:px-8;
+  max-width: 1200px;
+}
+
+.responsive-grid {
+  @apply grid gap-4 sm:gap-6;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .tablet-two-col {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+  .tablet-two-col > * {
+    flex: 1 1 45%;
+    min-width: 260px;
+  }
+}
+
+.glass-card {
+  @apply bg-white/80 backdrop-blur-md border border-white/20 shadow-xl;
+}
+
+.video-container {
+  aspect-ratio: 16 / 9;
+  @apply relative overflow-hidden rounded-2xl bg-slate-900;
+}
+
+.video-container video, 
+.video-container img {
+  @apply w-full h-full object-cover;
+}

@@ -1,0 +1,5 @@
+{
+  "name": "AtharvX",
+  "description": "A secure, role-based healthcare management MVP with multi-role authentication and administrative controls.",
+  "requestFramePermissions": ["camera", "microphone"]
+}
